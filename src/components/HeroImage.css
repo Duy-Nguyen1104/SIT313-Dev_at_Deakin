@@ -1,0 +1,12 @@
+/* src/components/HeroImage.css */
+.hero-image-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 1200px; 
+    height: auto;
+  }
+  
