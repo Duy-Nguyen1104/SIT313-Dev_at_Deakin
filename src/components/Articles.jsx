@@ -1,8 +1,6 @@
-import React from 'react';
-import { Card, Image, Grid } from 'semantic-ui-react';
-import './Articles.css';
-import { faker } from '@faker-js/faker';
-
+import React from "react";
+import { Card, Image, Grid } from "semantic-ui-react";
+import { faker } from "@faker-js/faker";
 
 const articles = Array.from({ length: 3 }).map(() => ({
   title: faker.lorem.sentence(),
@@ -25,9 +23,7 @@ const Articles = () => (
               <Card.Meta>{article.author}</Card.Meta>
               <Card.Description>{article.description}</Card.Description>
             </Card.Content>
-            <Card.Content extra>
-              ⭐ {article.rating} Stars
-            </Card.Content>
+            <Card.Content extra>⭐ {article.rating} Stars</Card.Content>
           </Card>
         </Grid.Column>
       ))}

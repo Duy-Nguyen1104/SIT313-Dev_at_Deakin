@@ -1,6 +1,5 @@
-import React from 'react';
-import { Form, Button, Input } from 'semantic-ui-react';
-import './SubscriptionForm.css';
+import React from "react";
+import { Form, Button, Input } from "semantic-ui-react";
 
 const SubscriptionForm = () => (
   <div className="subscription-form">

@@ -1,10 +1,9 @@
-import React from 'react';
-import { Grid, List, Segment } from 'semantic-ui-react';
-import './Footer.css';
+import React from "react";
+import { Grid, List, Segment } from "semantic-ui-react";
 
 const Footer = () => (
-  <Segment inverted vertical className="footer" >
-    <Grid divided inverted stackable style={{ marginLeft: '0px' }}>
+  <Segment inverted vertical className="footer">
+    <Grid divided inverted stackable style={{ marginLeft: "0px" }}>
       <Grid.Row>
         <Grid.Column width={3}>
           <h4>Explore</h4>

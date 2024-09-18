@@ -1,7 +1,6 @@
 // src/components/HeroImage.js
-import React from 'react';
-import { Image } from 'semantic-ui-react';
-import './HeroImage.css';
+import React from "react";
+import { Image } from "semantic-ui-react";
 
 const HeroImage = () => (
   <div className="hero-image-container">
