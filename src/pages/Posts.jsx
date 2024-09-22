@@ -119,7 +119,7 @@ function Posts() {
   }, [isMounted]);
 
   return (
-    <div className="flex flex-col p-6 ">
+    <div className="flex flex-col p-6 items-center ">
       <header className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800">New Post</h1>
       </header>
