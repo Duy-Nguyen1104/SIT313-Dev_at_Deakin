@@ -8,6 +8,8 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import Posts from "./pages/Posts";
 import Questions from "./pages/Questions";
+import Plans from "./pages/Plans";
+import Payment from "./pages/Payment";
 
 const App = () => (
   <Container>
@@ -25,6 +27,8 @@ const App = () => (
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="post" element={<Posts />} />
         <Route path="questions" element={<Questions />} />
+        <Route path="plans" element={<Plans />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
     </Router>
     <ToastContainer />

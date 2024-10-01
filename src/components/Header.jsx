@@ -26,6 +26,10 @@ const Header = () => {
     navigate("/questions");
   };
 
+  const onPlans = () => {
+    navigate("/plans");
+  };
+
   return (
     <Menu borderless className="header-menu" fixed="top">
       <Menu.Item header className="header-logo">
@@ -47,6 +51,10 @@ const Header = () => {
 
         <Button color="orange" className="header-button" onClick={onQuestions}>
           Find Questions
+        </Button>
+
+        <Button color="yellow" className="header-button" onClick={onPlans}>
+          Plans
         </Button>
 
         <Button className="header-button" onClick={onLogout}>

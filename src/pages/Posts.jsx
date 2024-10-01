@@ -11,6 +11,11 @@ import {
 import { db } from "../firebase.config";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { Controlled as CodeMirror } from "react-codemirror2";
+import "codemirror/lib/codemirror.css";
+import "codemirror/theme/material.css";
+// import "codemirror/mode/xml/xml";
+import { marked } from "marked";
 
 function Posts() {
   const [formData, setFormData] = useState({
@@ -25,6 +30,10 @@ function Posts() {
     { key: "math", text: "Math", value: "math" },
     { key: "science", text: "Science", value: "science" },
   ]);
+
+  const handleChange = (editor, data, value) => {
+    setFormData({ ...formData, description: value });
+  };
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -260,20 +269,33 @@ function Posts() {
                 className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
 
-              {/* Description */}
+              {/* Description using CodeMirror */}
               <label className="block text-sm font-medium text-gray-700 mt-4">
-                Description
+                Description (HTML/Markdown)
               </label>
-              <textarea
-                name="description"
-                value={formData.description}
-                onChange={(e) =>
-                  setFormData({ ...formData, description: e.target.value })
-                }
-                placeholder="Enter a detailed description"
-                required
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              />
+              <div style={{ direction: "ltr" }}>
+                {/* Ensuring left-to-right text direction */}
+                <CodeMirror
+                  value={formData.description}
+                  onBeforeChange={handleChange}
+                  options={{
+                    mode: "markdown",
+                    lineNumbers: true,
+                    theme: "default",
+                  }}
+                />
+              </div>
+
+              {/* Render the HTML below the CodeMirror editor */}
+              <div className="mt-4 p-4 bg-white border border-gray-300 rounded-lg">
+                <h3 className="text-lg font-semibold">Preview:</h3>
+                <div
+                  className="markdown-preview"
+                  dangerouslySetInnerHTML={{
+                    __html: marked(formData.description),
+                  }}
+                />
+              </div>
 
               {/* Tag Selection */}
               <label className="block text-sm font-medium text-gray-700 mt-4">

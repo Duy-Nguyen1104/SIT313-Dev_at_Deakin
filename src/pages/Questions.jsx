@@ -7,8 +7,9 @@ import {
   doc,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "../firebase.config"; // Ensure correct Firestore instance is imported
+import { db } from "../firebase.config";
 import { toast } from "react-toastify";
+import { marked } from "marked";
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
@@ -138,9 +139,21 @@ const Questions = () => {
               {question.data.title}
             </h3>
             <p className="text-gray-600 mb-4">
-              {expandedQuestionId === question.id
-                ? question.data.description
-                : `${question.data.description.substring(0, 10)}...`}
+              {expandedQuestionId === question.id ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: marked(question.data.description),
+                  }}
+                />
+              ) : (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: marked(
+                      question.data.description.substring(0, 10) + "..."
+                    ),
+                  }}
+                />
+              )}
             </p>
             <div className="text-sm text-gray-500 mb-4">
               #{question.data.tag}
