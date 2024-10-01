@@ -1,6 +1,6 @@
 # Description
 
-This is the design of the home page of DEV@Deakin for task 4.1P using React as shown in the wireframe.
+This is the design of the home page of DEV@Deakin for task 9.2D using React.
 
 ## Available Scripts
 
