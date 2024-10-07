@@ -4,9 +4,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 
 // Load your publishable key from the Stripe dashboard
-const stripePromise = loadStripe(
-  "pk_test_51Q4vdrGw7PUQwb0xE4p9ShahhLx8IB4ESMOS7g3GOCuINSp6StqlSCgbl10308oYAAkWFR065EO73yxlVeRQJ2rp00B0UUEe5O"
-);
+const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
 
 function Payment() {
   return (
