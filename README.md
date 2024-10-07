@@ -1,10 +1,37 @@
 # Description
 
-This is the design of the pages of DEV@Deakin for task 9.2D using React.
+Dev at Deakin is a web application designed to support students in creating and managing posts categorized as questions or articles. The platform also offers newsletter subscription functionality and payment processing using Stripe, providing a seamless and engaging experience for users. The project is built using a full stack approach, integrating both frontend and backend technologies.
 
-## Available Scripts
+## Features
+- **User Authentication**: Users can sign up and log in to create and manage posts securely.
+- **Post Creation**: Users can create posts categorized as either questions or articles, with each type stored in its respective database.
+- **Questions Creation**: A dedicated feature allows users to create posts specifically for asking questions, fostering an interactive community.
+- **Newsletter Subscription**: Users can subscribe to the platform's newsletter and receive automatic welcome emails using the Mailgun API.
+- **Payment Processing**: Stripe integration allows for secure and smooth payment processing within the platform.
 
-In the project directory, you can run:
+## Tech Stack
+- **Frontend**: React, Semantic UI, Tailwind CSS, React Toastify
+- **Backend**: Node.js, Express.js, Mailgun API
+- **Database**: Firebase (for user authentication and storage)
+
+## Installation Instructions
+
+To set up the Dev at Deakin project locally, follow these steps:
+
+**Clone the Repository**  
+First, clone the repository to your local machine using Git:
+
+### `git clone https://github.com/Duy-Nguyen1104/SIT313-Task9.2D`
+
+Install the required dependencies for both the frontend and backend:
+
+### `npm install`
+
+Start the React application
+
+### `npm start`
+
+Start the backend server
 
 ### `npm start`
 
@@ -19,18 +46,6 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `node src/server.js`
 
 
