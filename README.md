@@ -29,7 +29,7 @@ Start the React application
 ### `npm start`
 
 Start the backend server
-### `npm start`
+### `node src/server.js`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
