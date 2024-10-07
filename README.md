@@ -20,19 +20,15 @@ To set up the Dev at Deakin project locally, follow these steps:
 
 **Clone the Repository**  
 First, clone the repository to your local machine using Git:
-
 ### `git clone https://github.com/Duy-Nguyen1104/SIT313-Task9.2D`
 
 Install the required dependencies for both the frontend and backend:
-
 ### `npm install`
 
 Start the React application
-
 ### `npm start`
 
 Start the backend server
-
 ### `npm start`
 
 Runs the app in the development mode.\
